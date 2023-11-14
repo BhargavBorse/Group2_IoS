@@ -11,11 +11,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
+            // Override point for customization after application launch.
+
+            window = UIWindow(frame: UIScreen.main.bounds)
+            
+            // Create an instance of CruiseBookingViewController
+            let cruiseBookingViewController = CruiseBookingViewController()
+
+            // Wrap it in a UINavigationController
+            let navigationController = UINavigationController(rootViewController: cruiseBookingViewController)
+
+            // Set the navigation controller as the root view controller
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+
+            return true
+        }
 
     // MARK: UISceneSession Lifecycle
 

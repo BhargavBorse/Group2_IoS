@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151C693B2B00B543000C3600 /* CruiseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C693A2B00B543000C3600 /* CruiseDetailsViewController.swift */; };
+		151C693F2B00DAC9000C3600 /* CruiseBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C693E2B00DAC9000C3600 /* CruiseBookingViewController.swift */; };
 		156E76FE2AECAEDD0021D1EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E76FD2AECAEDD0021D1EB /* AppDelegate.swift */; };
 		156E77002AECAEDD0021D1EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E76FF2AECAEDD0021D1EB /* SceneDelegate.swift */; };
 		156E77022AECAEDD0021D1EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E77012AECAEDD0021D1EB /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 		1585BEF62AEDB20C005988DE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585BEF52AEDB20C005988DE /* CollectionViewCell.swift */; };
 		1585BEF82AEDB291005988DE /* SerachResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585BEF72AEDB291005988DE /* SerachResultViewController.swift */; };
 		15DBB6D52AEE2A1F0050759B /* EnterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBB6D42AEE2A1F0050759B /* EnterDetailsViewController.swift */; };
+		22E5DC652B01F5540047B9FE /* CruisePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5DC642B01F5540047B9FE /* CruisePaymentViewController.swift */; };
+		22E5DC672B01FBEB0047B9FE /* CruiseInfoDetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5DC662B01FBEB0047B9FE /* CruiseInfoDetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		151C693A2B00B543000C3600 /* CruiseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseDetailsViewController.swift; sourceTree = "<group>"; };
+		151C693E2B00DAC9000C3600 /* CruiseBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseBookingViewController.swift; sourceTree = "<group>"; };
 		156E76FA2AECAEDD0021D1EB /* Team2_MAPD714_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Team2_MAPD714_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		156E76FD2AECAEDD0021D1EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		156E76FF2AECAEDD0021D1EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +59,8 @@
 		1585BEF52AEDB20C005988DE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		1585BEF72AEDB291005988DE /* SerachResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerachResultViewController.swift; sourceTree = "<group>"; };
 		15DBB6D42AEE2A1F0050759B /* EnterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDetailsViewController.swift; sourceTree = "<group>"; };
+		22E5DC642B01F5540047B9FE /* CruisePaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruisePaymentViewController.swift; sourceTree = "<group>"; };
+		22E5DC662B01FBEB0047B9FE /* CruiseInfoDetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseInfoDetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,10 @@
 				1585BEF52AEDB20C005988DE /* CollectionViewCell.swift */,
 				1585BEF72AEDB291005988DE /* SerachResultViewController.swift */,
 				15DBB6D42AEE2A1F0050759B /* EnterDetailsViewController.swift */,
+				151C693A2B00B543000C3600 /* CruiseDetailsViewController.swift */,
+				151C693E2B00DAC9000C3600 /* CruiseBookingViewController.swift */,
+				22E5DC642B01F5540047B9FE /* CruisePaymentViewController.swift */,
+				22E5DC662B01FBEB0047B9FE /* CruiseInfoDetViewController.swift */,
 			);
 			path = Team2_MAPD714_Project;
 			sourceTree = "<group>";
@@ -266,8 +278,12 @@
 				156E77022AECAEDD0021D1EB /* ViewController.swift in Sources */,
 				1585BEF82AEDB291005988DE /* SerachResultViewController.swift in Sources */,
 				156E76FE2AECAEDD0021D1EB /* AppDelegate.swift in Sources */,
+				22E5DC672B01FBEB0047B9FE /* CruiseInfoDetViewController.swift in Sources */,
 				1585BEF62AEDB20C005988DE /* CollectionViewCell.swift in Sources */,
 				15DBB6D52AEE2A1F0050759B /* EnterDetailsViewController.swift in Sources */,
+				22E5DC652B01F5540047B9FE /* CruisePaymentViewController.swift in Sources */,
+				151C693F2B00DAC9000C3600 /* CruiseBookingViewController.swift in Sources */,
+				151C693B2B00B543000C3600 /* CruiseDetailsViewController.swift in Sources */,
 				156E77002AECAEDD0021D1EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +458,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,6 +486,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

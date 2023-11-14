@@ -49,7 +49,7 @@ class SerachResultViewController: UIViewController,UICollectionViewDelegate, UIC
             layout.minimumLineSpacing = 10 // Adjust the spacing between rows
             
             // Calculate the width of each cell to fit two cells in a row with spacing
-            let cellWidth = (cruiseViewCollection.frame.size.width - 30) / 2
+        let cellWidth = (cruiseViewCollection.frame.size.width - 28) / 2.3
         let cellHeight = cellWidth * 1.5 // Adjust the height to your desired aspect ratio
             
             layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
