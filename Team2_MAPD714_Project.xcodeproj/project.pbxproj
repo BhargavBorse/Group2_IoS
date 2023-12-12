@@ -22,6 +22,11 @@
 		15DBB6D52AEE2A1F0050759B /* EnterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBB6D42AEE2A1F0050759B /* EnterDetailsViewController.swift */; };
 		22E5DC652B01F5540047B9FE /* CruisePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5DC642B01F5540047B9FE /* CruisePaymentViewController.swift */; };
 		22E5DC672B01FBEB0047B9FE /* CruiseInfoDetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5DC662B01FBEB0047B9FE /* CruiseInfoDetViewController.swift */; };
+		CE57B8242B14FAB700E38CC5 /* DBmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE57B8232B14FAB700E38CC5 /* DBmanager.swift */; };
+		CEE972CA2B141A0800EDF86A /* LoginControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE972C92B141A0800EDF86A /* LoginControllerViewController.swift */; };
+		CEE972CC2B141A4D00EDF86A /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE972CB2B141A4D00EDF86A /* RegistrationController.swift */; };
+		CEE972CE2B141A8600EDF86A /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE972CD2B141A8600EDF86A /* UserProfileViewController.swift */; };
+		CEE972D12B145BEF00EDF86A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE972D02B145BEF00EDF86A /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,12 @@
 		15DBB6D42AEE2A1F0050759B /* EnterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDetailsViewController.swift; sourceTree = "<group>"; };
 		22E5DC642B01F5540047B9FE /* CruisePaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruisePaymentViewController.swift; sourceTree = "<group>"; };
 		22E5DC662B01FBEB0047B9FE /* CruiseInfoDetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseInfoDetViewController.swift; sourceTree = "<group>"; };
+		CE57B8232B14FAB700E38CC5 /* DBmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBmanager.swift; sourceTree = "<group>"; };
+		CEE972C92B141A0800EDF86A /* LoginControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerViewController.swift; sourceTree = "<group>"; };
+		CEE972CB2B141A4D00EDF86A /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		CEE972CD2B141A8600EDF86A /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		CEE972D02B145BEF00EDF86A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CEE972D42B145E1200EDF86A /* Team2_MAPD714_Project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Team2_MAPD714_Project-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE972D12B145BEF00EDF86A /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +107,7 @@
 				156E77132AECAEDE0021D1EB /* Team2_MAPD714_ProjectTests */,
 				156E771D2AECAEDE0021D1EB /* Team2_MAPD714_ProjectUITests */,
 				156E76FB2AECAEDD0021D1EB /* Products */,
+				CEE972CF2B145BEF00EDF86A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,11 +132,16 @@
 				156E770B2AECAEDE0021D1EB /* Info.plist */,
 				1585BEF52AEDB20C005988DE /* CollectionViewCell.swift */,
 				1585BEF72AEDB291005988DE /* SerachResultViewController.swift */,
+				CEE972C92B141A0800EDF86A /* LoginControllerViewController.swift */,
+				CEE972CB2B141A4D00EDF86A /* RegistrationController.swift */,
 				15DBB6D42AEE2A1F0050759B /* EnterDetailsViewController.swift */,
+				CEE972CD2B141A8600EDF86A /* UserProfileViewController.swift */,
 				151C693A2B00B543000C3600 /* CruiseDetailsViewController.swift */,
 				151C693E2B00DAC9000C3600 /* CruiseBookingViewController.swift */,
 				22E5DC642B01F5540047B9FE /* CruisePaymentViewController.swift */,
 				22E5DC662B01FBEB0047B9FE /* CruiseInfoDetViewController.swift */,
+				CEE972D42B145E1200EDF86A /* Team2_MAPD714_Project-Bridging-Header.h */,
+				CE57B8232B14FAB700E38CC5 /* DBmanager.swift */,
 			);
 			path = Team2_MAPD714_Project;
 			sourceTree = "<group>";
@@ -143,6 +161,14 @@
 				156E77202AECAEDE0021D1EB /* Team2_MAPD714_ProjectUITestsLaunchTests.swift */,
 			);
 			path = Team2_MAPD714_ProjectUITests;
+			sourceTree = "<group>";
+		};
+		CEE972CF2B145BEF00EDF86A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEE972D02B145BEF00EDF86A /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +239,7 @@
 				TargetAttributes = {
 					156E76F92AECAEDD0021D1EB = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1500;
 					};
 					156E770F2AECAEDE0021D1EB = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -281,9 +308,13 @@
 				22E5DC672B01FBEB0047B9FE /* CruiseInfoDetViewController.swift in Sources */,
 				1585BEF62AEDB20C005988DE /* CollectionViewCell.swift in Sources */,
 				15DBB6D52AEE2A1F0050759B /* EnterDetailsViewController.swift in Sources */,
+				CEE972CA2B141A0800EDF86A /* LoginControllerViewController.swift in Sources */,
 				22E5DC652B01F5540047B9FE /* CruisePaymentViewController.swift in Sources */,
+				CEE972CE2B141A8600EDF86A /* UserProfileViewController.swift in Sources */,
+				CE57B8242B14FAB700E38CC5 /* DBmanager.swift in Sources */,
 				151C693F2B00DAC9000C3600 /* CruiseBookingViewController.swift in Sources */,
 				151C693B2B00B543000C3600 /* CruiseDetailsViewController.swift in Sources */,
+				CEE972CC2B141A4D00EDF86A /* RegistrationController.swift in Sources */,
 				156E77002AECAEDD0021D1EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -469,6 +501,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "project.Team2-MAPD714-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Team2_MAPD714_Project/Team2_MAPD714_Project-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -479,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -497,6 +532,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "project.Team2-MAPD714-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Team2_MAPD714_Project/Team2_MAPD714_Project-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

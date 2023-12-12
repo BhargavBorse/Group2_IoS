@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DB658282-F6D8-4522-B6DB-CF615E5FCCF8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A9F6957-036F-401D-A9B8-DE18FD989B8F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Team2_MAPD714_Project/CruiseBookingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "311"
+            endingLineNumber = "311"
+            landmarkName = "submitButtonTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "152E82EB-DA4E-4974-BCA4-F2E9C06B2349"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Team2_MAPD714_Project/DBmanager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "502"
+            endingLineNumber = "502"
+            landmarkName = "read()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "152E82EB-DA4E-4974-BCA4-F2E9C06B2349 - 5f50a1b1aac89df4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Team2_MAPD714_Project.DBmanager.read() -&gt; Swift.Array&lt;Team2_MAPD714_Project.UserProfile&gt;"
+                  moduleName = "Team2_MAPD714_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Final%20Ios/Group2_IoS/Team2_MAPD714_Project/DBmanager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "498"
+                  endingLineNumber = "498"
+                  offsetFromSymbolStart = "470">
+               </Location>
+               <Location
+                  uuid = "152E82EB-DA4E-4974-BCA4-F2E9C06B2349 - 5f50a1b1aac89c70"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Team2_MAPD714_Project.DBmanager.read() -&gt; Swift.Array&lt;Team2_MAPD714_Project.UserProfile&gt;"
+                  moduleName = "Team2_MAPD714_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Final%20Ios/Group2_IoS/Team2_MAPD714_Project/DBmanager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "502"
+                  endingLineNumber = "502"
+                  offsetFromSymbolStart = "235">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -31,8 +31,8 @@ class CruiseBookingViewController: UIViewController, UIPickerViewDelegate, UIPic
     var over60Label: UILabel!
     var submitButton: UIButton!
 
-    var numberOfAdults: Int = 0
-    var numberOfKids: Int = 0
+//    var numberOfAdults: Int = 0
+//    var numberOfKids: Int = 0
     var isSeniorsTraveling: Bool = false
 
     override func viewDidLoad() {
@@ -71,7 +71,7 @@ class CruiseBookingViewController: UIViewController, UIPickerViewDelegate, UIPic
         navItem.leftBarButtonItem = backButton
         let customColor = UIColor(red: CGFloat(0x26) / 255.0,
                                   green: CGFloat(0x1C) / 255.0,
-                                  blue: CGFloat(0x38) / 255.0, alpha: 1.0)
+                                  blue: CGFloat(0x38) / 255.0,alpha: 1.0)
         navBar.barTintColor = customColor
         // Set the text color to white
         let titleTextAttributes: [NSAttributedString.Key: Any] = [
@@ -295,13 +295,114 @@ class CruiseBookingViewController: UIViewController, UIPickerViewDelegate, UIPic
     @objc func switchChanged(_ sender: UISwitch) {
         if let seniorsSwitch = seniorsSwitch {
             isSeniorsTraveling = seniorsSwitch.isOn
+            print(isSeniorsTraveling)
         }
     }
 
     @objc func submitButtonTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let paymentViewController = storyboard.instantiateViewController(withIdentifier: "CruisePaymentViewController") as! CruisePaymentViewController
-        present(paymentViewController, animated: true, completion: nil)
+        
+        // Get value and enter in table
+        guard let fname = firstNameTextField.text else { return }
+        guard let lname = lastNameTextField.text else { return }
+        guard let phone = phoneTextField.text else { return }
+        guard let email = emailTextField.text else { return }
+        guard let address = addressTextField.text else { return }
+        guard let city = cityTextField.text else { return }
+        guard let country = countryTextField.text else { return }
+        guard let nodadult = adultsTextField.text else { return }
+        guard let nofkids = kidsTextField.text else { return }
+        var over60 = isSeniorsTraveling == true ? "Yes" : "No"
+        
+        // Validate First Name
+        guard let fname = firstNameTextField.text, !fname.isEmpty else {
+            showAlert(message: "Please enter First Name")
+            return
+        }
+
+        // Validate Last Name
+        guard let lname = lastNameTextField.text, !lname.isEmpty else {
+            showAlert(message: "Please enter Last Name")
+            return
+        }
+
+        // Validate Phone Number
+        guard let phone = phoneTextField.text, phone.count == 10, let _ = Int(phone) else {
+            showAlert(message: "Please enter a valid 10-digit Phone Number")
+            return
+        }
+
+        // Validate Email
+        guard let email = emailTextField.text, isValidEmail(email) else {
+            showAlert(message: "Please enter a valid Email address")
+            return
+        }
+
+        // Validate Address, City, Country, Adults, and Kids
+        guard let address = addressTextField.text, !address.isEmpty else {
+            showAlert(message: "Please enter Address")
+            return
+        }
+
+        guard let city = cityTextField.text, !city.isEmpty else {
+            showAlert(message: "Please enter City")
+            return
+        }
+
+        guard let country = countryTextField.text, !country.isEmpty else {
+            showAlert(message: "Please enter Country")
+            return
+        }
+
+        guard let nodadult = adultsTextField.text, let _ = Int(nodadult) else {
+            showAlert(message: "Please enter a valid number for Adults")
+            return
+        }
+
+        guard let nofkids = kidsTextField.text, let _ = Int(nofkids) else {
+            showAlert(message: "Please enter a valid number for Kids")
+            return
+        }
+        
+        if let useridString = UserDefaults.standard.string(forKey: "userid"),
+           let userid = Int(useridString) {
+
+            // If it passes every validation insert user in the database
+            let db = DBmanager() // create object of the database class
+            let lastInsertedID = db.insertInBooking(address: address, city: city, country: country, phonenumber: phone, email: email, firstname: fname, lastname: lname, number_of_adults: nodadult, number_of_kids: nofkids, anyone_over_60: over60, userid: userid)
+
+//            print("&&&&&&")
+//            print("\(fname) | \(lname) | \(address) | \(city) | \(country) | \(city) | \(email) | \(nodadult) | \(nofkids) | \(over60) | \(userid)")
+//            print("&&&&&&")
+            print("last inserted idddddddddddddddddddddddddddd \(lastInsertedID)")
+                    
+            // Example: Set a value in UserDefaults
+            UserDefaults.standard.set(lastInsertedID , forKey: "lastBooking")
+            
+            let paymentViewController = storyboard.instantiateViewController(withIdentifier: "CruisePayment") as! CruisePaymentViewController
+            present(paymentViewController, animated: true, completion: nil)
+            
+            
+            
+            redirectToCruiseDetailViewController()
+            
+            
+            firstNameTextField.text = ""
+            lastNameTextField.text = ""
+            phoneTextField.text = ""
+            emailTextField.text = ""
+            addressTextField.text = ""
+            cityTextField.text = ""
+            countryTextField.text = ""
+            adultsTextField.text = ""
+            kidsTextField.text = ""
+            seniorsSwitch?.isOn = false
+
+        } else {
+            // Handle the case where the userid is not a valid integer
+            print("Invalid userid value in UserDefaults.")
+        }
+        
     }
 
     @objc func backButtonTapped() {
@@ -315,6 +416,19 @@ class CruiseBookingViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
     }
 
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailPredicate.evaluate(with: email)
+    }
+
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Validation Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: - UIPickerViewDataSource and UIPickerViewDelegate methods
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

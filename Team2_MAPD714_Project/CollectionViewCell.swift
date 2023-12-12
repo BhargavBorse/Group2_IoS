@@ -16,7 +16,6 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cruiseImage: UIImageView!
-    
     @IBOutlet weak var cruiseLabel: UILabel!
-    
+//    @IBOutlet weak var borderView: UIView!
 }
